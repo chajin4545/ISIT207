@@ -10,14 +10,13 @@
 <body>
     <!-- Navigation Bar -->
     <header>
-        <button class="menu-toggle">Menu</button>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="catalog.html">Catalog</a></li>
                 <li><a href="reservation.html">Reservation</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a class="btn" id="loginBtn">Login</a></li>
             </ul>
         </nav>
     </header>
@@ -30,6 +29,22 @@
             <a href="reservation.html" class="btn">Reserve Now</a>
         </section>
     </main>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="loginForm">
+                <label for="userId">User ID:</label>
+                <input type="text" id="userId" name="userId" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+                <p id="loginError" style="color:red; display:none;"></p>
+            </form>
+            <button id="logoutBtn" style="display:none;">Logout</button>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>

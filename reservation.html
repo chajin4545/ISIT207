@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation - AZoom Car Rental</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="catalog.html">Catalog</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Make a Reservation</h1>
+        <form action="process_reservation.php" method="post">
+            <label for="car_type">Car Type:</label>
+            <select id="car_type" name="car_type">
+                <option value="economy">Economy</option>
+                <option value="standard">Standard</option>
+                <option value="luxury">Luxury</option>
+            </select>
+
+            <label for="pick_up_date">Pick-up Date:</label>
+            <input type="date" id="pick_up_date" name="pick_up_date" required>
+
+            <label for="return_date">Return Date:</label>
+            <input type="date" id="return_date" name="return_date" required>
+
+            <button type="submit" class="btn">Submit Reservation</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AZoom Car Rental. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

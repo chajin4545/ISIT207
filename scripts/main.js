@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const user = users.users.find(u => u.id === userId && u.password === password);
         if (user) {
-            loginBtn.textContent = `Hi ${user.id}`;
+            loginBtn.textContent = `Welcome ${userId}`;
             logoutBtn.style.display = "block";
             loginModal.style.display = "none";
             loginForm.style.display = "none"; // Hide the login form
@@ -48,4 +48,27 @@ document.addEventListener('DOMContentLoaded', function() {
         logoutBtn.style.display = "none";
         loginError.style.display = "none";
     }
+
+    // Carousell
+    let currentIndex = 0;
+
+    function moveSlide(step) {
+    const slides = document.getElementsByClassName('carousel-item');
+    const totalSlides = slides.length;
+    currentIndex = (currentIndex + step + totalSlides) % totalSlides;
+    const offset = -currentIndex * 100 / totalSlides;
+    document.getElementById('carouselSlides').style.transform = `translateX(${offset}%)`;
+    }
+
+    document.getElementById('sedan').addEventListener('click', function() {
+        window.location.href = 'sedan.html'; // Change URL as needed
+    });
+    document.getElementById('suv').addEventListener('click', function() {
+        window.location.href = 'suv.html'; // Change URL as needed
+    });
+    document.getElementById('luxury').addEventListener('click', function() {
+        window.location.href = 'luxury.html'; // Change URL as needed
+    });
 });
+
+

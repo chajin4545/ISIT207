@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AZoom Car Rental</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -12,23 +18,11 @@
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="catalog.html">Catalog</a></li>
-                <li><a href="reservation.html">Reservation</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a class="btn" id="loginBtn">Login</a></li>
+                <li><a href="index.html"><img src="assets/images/Azoom_Logo.png" alt="Home"></a></li>
             </ul>
+            <a class="btn" id="loginBtn">Login</a>
         </nav>
     </header>
-
-    <!-- Main Content Area -->
-    <main>
-        <section class="hero">
-            <h1>Welcome to AZoom Car Rental</h1>
-            <p>Explore our range of electric cars and make your reservation today!</p>
-            <a href="reservation.html" class="btn">Reserve Now</a>
-        </section>
-    </main>
 
     <!-- Login Modal -->
     <div id="loginModal" class="modal" style="display:none;">
@@ -45,6 +39,89 @@
             <button id="logoutBtn" style="display:none;">Logout</button>
         </div>
     </div>
+
+    <!-- Main Contents -->
+    <main>
+        <!-- Reservation Form -->
+        <section class="hero-section" style="background-image: url('assets/images/index_background.jpg');">
+            <div class="reservation-bar">
+                <h1>Azoom Car Rentals. Let's Go!</h1>
+                <form>
+                    <select id="vehicleType" name="vehicleType">
+                        <option value="sedan">Sedan</option>
+                        <option value="suv">SUV</option>
+                        <option value="luxury">Luxury</option>
+                    </select>
+                    <input type="date" id="pickupDate" name="pickupDate" placeholder="Pick-up Date">
+                    <input type="date" id="returnDate" name="returnDate" placeholder="Return Date">
+                    <button type="submit">View Vehicles</button>
+                </form>
+            </div>
+        </section>
+        
+        <!-- Vehicle Types Section -->
+        <section class="vehicle-types">
+            <div class="vehicle sedan" style="background-image: url('assets/images/sedan.png');">
+                <h2 class="sedan">Sedan</h2>
+            </div>
+            <div class="vehicle suv" style="background-image: url('assets/images/suv.png');">
+                <h2 class="SUV">SUV</h2>
+            </div>
+            <div class="vehicle luxury" style="background-image: url('assets/images/luxury.png');">
+                <h2 class="Luxury">Luxury</h2>
+            </div>
+        </section>
+
+        <!-- Enquiry section -->
+        <section class="contact-assistance">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Need assistance? Feel free to ask us anything,</h2>
+                    <p><strong>Address:</strong> 1094 Lower Delta Road, Motorway Building, Singapore 169205</p>
+                    <p><strong>Phone:</strong> +65 6466 2200</p>
+                    <p><strong>Email:</strong> rent@motorwaycarrentals.com</p>
+                </div>
+                <div class="contact-form">
+                    <form action="submit_form.php" method="POST">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                        
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+    
+                        <label for="contactNumber">Contact Number *</label>
+                        <input type="text" id="contactNumber" name="contactNumber" required>
+    
+                        <label for="contactMode">Preferred Mode of Contact *</label>
+                        <select id="contactMode" name="contactMode">
+                            <option value="whatsapp">WhatsApp</option>
+                            <option value="phone">Phone</option>
+                            <option value="email">Email</option>
+                        </select>
+    
+                        <label for="serviceType">Interested Service *</label>
+                        <select id="serviceType" name="serviceType">
+                            <option value="short_term">Short Term Rental (Daily / Monthly)</option>
+                            <option value="long_term">Long Term Rental</option>
+                        </select>
+    
+                        <label for="vehicleType">Interested Vehicle *</label>
+                        <select id="vehicleType" name="vehicleType">
+                            <option value="any">Any Type</option>
+                            <option value="sedan">Sedan</option>
+                            <option value="suv">SUV</option>
+                            <option value="luxury">Luxury</option>
+                        </select>
+    
+                        <label for="comments">Additional Comments (if any)</label>
+                        <textarea id="comments" name="comments"></textarea>
+    
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>

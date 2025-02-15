@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
             loginBtn.textContent = `Hi ${user.id}`;
             logoutBtn.style.display = "block";
             loginModal.style.display = "none";
+            loginForm.style.display = "none"; // Hide the login form
         } else {
             loginError.textContent = "Invalid username or password. Please try again.";
             loginError.style.display = "block";
@@ -43,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     logoutBtn.onclick = function() {
         loginBtn.textContent = "Login";
+        loginForm.style.display = "block"; // Show the login form
         logoutBtn.style.display = "none";
         loginError.style.display = "none";
     }

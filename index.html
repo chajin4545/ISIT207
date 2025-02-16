@@ -54,8 +54,8 @@
                     </select>
                     <input type="date" id="pickupDate" name="pickupDate" placeholder="Pick-up Date">
                     <input type="date" id="returnDate" name="returnDate" placeholder="Return Date">
-                    <button type="submit">View Vehicles</button>
-                </form>
+                    <button type="submit" id="viewVehicles">View Vehicles</button>
+                </form> 
             </div>
         </section>
         
@@ -64,13 +64,13 @@
         <!-- Vehicle Types Section -->
         <section class="vehicle-types">
             
-            <div class="vehicle sedan" style="background-image: url('assets/images/sedan.png');">
+            <div id="sedan-card" class="vehicle sedan" style="background-image: url('assets/images/sedan.png');">
                 <h2 class="sedan">Sedan</h2>
             </div>
-            <div class="vehicle suv" style="background-image: url('assets/images/suv.png');">
+            <div id="suv-card" class="vehicle suv" style="background-image: url('assets/images/suv.png');">
                 <h2 class="SUV">SUV</h2>
             </div>
-            <div class="vehicle luxury" style="background-image: url('assets/images/luxury.png');">
+            <div id="luxury-card" class="vehicle luxury" style="background-image: url('assets/images/luxury.png');">
                 <h2 class="Luxury">Luxury</h2>
             </div>
         </section>
@@ -132,5 +132,6 @@
     </footer>
 
     <script src="scripts/main.js"></script>
+    <script src="scripts/index.js"></script>
 </body>
 </html>

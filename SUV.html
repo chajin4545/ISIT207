@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUV cars</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/Cars.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><img src="assets/images/Azoom_Logo.png" alt="Home"></a></li>
+            </ul>
+            <a class="btn" id="loginBtn">Login</a>
+        </nav>
+    </header>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="loginForm">
+                <label for="userId">User ID:</label>
+                <input type="text" id="userId" name="userId" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+                <p id="loginError" style="color:red; display:none;"></p>
+            </form>
+            <button id="logoutBtn" style="display:none;">Logout</button>
+        </div>
+    </div>
+
+    <main>
+        <div class="container">
+            <!-- vehicle 1 -->
+            <div class="vehicle-card">
+                <div class="vehicle-image">
+                    <img src="assets/images/kia_ev9.png" alt="kia ev9">
+                </div>
+                <div class="vehicle-details">
+                    <h2>KIA EV9</h2>
+                    <p class="price">$260</p>
+                </div>
+                <div class="vehicle-actions">
+                    <button id="kia">Select Options</button>
+                </div>
+            </div>
+
+            <!-- vehicle 2 -->
+            <div class="vehicle-card">
+                <div class="vehicle-image">
+                    <img src="assets/images/volvo_c40.png" alt="volvo c40">
+                </div>
+                <div class="vehicle-details">
+                    <h2>Volvo C40</h2>
+                    <p class="price">$218</p>
+                </div>
+                <div class="vehicle-actions">
+                    <button id="volvo">Select Options</button>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AZoom Car Rental. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/SUV.js"></script>
+</body>
+</html>

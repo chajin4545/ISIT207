@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sedan Cars</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/Cars.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><img src="assets/images/Azoom_Logo.png" alt="Home"></a></li>
+            </ul>
+            <a class="btn" id="loginBtn">Login</a>
+        </nav>
+    </header>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="loginForm">
+                <label for="userId">User ID:</label>
+                <input type="text" id="userId" name="userId" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+                <p id="loginError" style="color:red; display:none;"></p>
+            </form>
+            <button id="logoutBtn" style="display:none;">Logout</button>
+        </div>
+    </div>
+
+    <main>
+        <div class="container">
+            <!-- vehicle 1 -->
+            <div class="vehicle-card">
+                <div class="vehicle-image">
+                    <img src="assets/images/tesla_model_3_front.png" alt="tesla model 3">
+                </div>
+                <div class="vehicle-details">
+                    <h2>Tesla Model 3</h2>
+                    <p class="price">$160</p>
+                </div>
+                <div class="vehicle-actions">
+                    <button id="tesla">Select Options</button>
+                </div>
+            </div>
+
+            <!-- vehicle 2 -->
+            <div class="vehicle-card">
+                <div class="vehicle-image">
+                    <img src="assets/images/byd_seal_front.png" alt="byd seal">
+                </div>
+                <div class="vehicle-details">
+                    <h2>BYD seal</h2>
+                    <p class="price">$128</p>
+                </div>
+                <div class="vehicle-actions">
+                    <button id="byd">Select Options</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 AZoom Car Rental. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/sedan.js"></script>
+</body>
+</html>

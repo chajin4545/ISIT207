@@ -5,38 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservation - AZoom Car Rental</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/reservation.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="catalog.html">Catalog</a></li>
-                <li><a href="reservation.html">Reservation</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html"><img src="assets/images/Azoom_Logo.png" alt="Home"></a></li>
             </ul>
+            <a class="btn" id="loginBtn">Login</a>
         </nav>
     </header>
 
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="loginForm">
+                <label for="userId">User ID:</label>
+                <input type="text" id="userId" name="userId" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+                <p id="loginError" style="color:red; display:none;"></p>
+            </form>
+            <button id="logoutBtn" style="display:none;">Logout</button>
+        </div>
+    </div>
+
     <main>
-        <h1>Make a Reservation</h1>
-        <form action="process_reservation.php" method="post">
-            <label for="car_type">Car Type:</label>
-            <select id="car_type" name="car_type">
-                <option value="economy">Economy</option>
-                <option value="standard">Standard</option>
-                <option value="luxury">Luxury</option>
-            </select>
+        <div class="reservation-container">
+            <div class="car-info">
+                <img id="carImage" src="" alt="Car Image">
+                <h2 id="carName"></h2>
+                <p id="priceTag"></p>
+            </div>
+            <div class="booking-form">
+                <label for="pickUpDate">Pick-up Date & Time *</label>
+                <input type="datetime-local" id="pickUpDate" name="pickUpDate" required>
+    
+                <label for="dropOffDate">Drop-Off Date & Time *</label>
+                <input type="datetime-local" id="dropOffDate" name="dropOffDate" required>
+    
+                <label for="pickUpLocation">Pick-up Location *</label>
+                <select id="pickUpLocation" name="pickUpLocation">
+                    <option>Choose Pick-up Location</option>
+                    <option>Delivered to Your Door-Step</option>
+                </select>
+    
+                <label for="dropOffLocation">Drop-off Location *</label>
+                <select id="dropOffLocation" name="dropOffLocation">
+                    <option>Choose Drop-Off Location</option>
+                    <option>Return at Your Door-Step</option>
+                </select>
 
-            <label for="pick_up_date">Pick-up Date:</label>
-            <input type="date" id="pick_up_date" name="pick_up_date" required>
-
-            <label for="return_date">Return Date:</label>
-            <input type="date" id="return_date" name="return_date" required>
-
-            <button type="submit" class="btn">Submit Reservation</button>
-        </form>
+                <div id="totalCostDisplay" style="margin-top: 20px;">Total Cost: $0</div>
+                <div id="errorMessage" style="color: red;"></div>
+    
+                <button type="submit" id="bookNowButton">Book Now</button>
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -44,5 +73,6 @@
     </footer>
 
     <script src="scripts/main.js"></script>
+    <script src="scripts/reservation.js"></script>
 </body>
 </html>

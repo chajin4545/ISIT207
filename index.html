@@ -46,7 +46,7 @@
         <section class="hero-section" style="background-image: url('assets/images/index_background.jpg');">
             <div class="reservation-bar">
                 <h1>Azoom Car Rentals. Let's Go!</h1>
-                <form>
+                <form id="reservationForm">
                     <select id="vehicleType" name="vehicleType">
                         <option value="sedan">Sedan</option>
                         <option value="suv">SUV</option>
@@ -54,6 +54,7 @@
                     </select>
                     <input type="date" id="pickupDate" name="pickupDate" placeholder="Pick-up Date">
                     <input type="date" id="returnDate" name="returnDate" placeholder="Return Date">
+                    <a id="reserErrorMsg" class="error-message"></a>
                     <button type="submit" id="viewVehicles">View Vehicles</button>
                 </form> 
             </div>
@@ -85,7 +86,7 @@
                     <p><strong>Email:</strong> rent@azoom.com</p>
                 </div>
                 <div class="contact-form">
-                    <form action="submit_form.php" method="POST">
+                    <form>
                         <label for="fullName">Full Name *</label>
                         <input type="text" id="fullName" name="fullName" required>
                         

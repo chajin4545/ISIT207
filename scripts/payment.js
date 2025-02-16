@@ -5,6 +5,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const paymentResult = document.getElementById('paymentResult');
     const homeButton = document.getElementById('homeButton');
 
+    const totalPriceDisplay = document.getElementById('totalPriceDisplay');
+    const params = new URLSearchParams(window.location.search);
+    const totalPrice = params.get('totalPrice');
+
+    totalPriceDisplay.textContent = `Total Price: $${totalPrice}.00`;
+
     payButton.addEventListener('click', function() {
         if (!validateCardDetails()) {
             alert('Please check your card details.');

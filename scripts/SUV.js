@@ -18,10 +18,10 @@ window.onload = function() {
     }
 
     document.getElementById('kia').addEventListener('click', function() {
-        window.location.href = buildURL('http://localhost:8080/reservation.html', 'KIA EV9', '260.00', 'assets/images/kia_ev9.png');
+        window.location.href = buildURL('reservation.html', 'KIA EV9', '260.00', 'assets/images/kia_ev9.png');
     });
 
     document.getElementById('volvo').addEventListener('click', function() {
-        window.location.href = buildURL('http://localhost:8080/reservation.html', 'Volvo C40', '218.00', 'assets/images/volvo_c40.png');
+        window.location.href = buildURL('reservation.html', 'Volvo C40', '218.00', 'assets/images/volvo_c40.png');
     });
 };

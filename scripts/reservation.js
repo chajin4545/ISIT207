@@ -43,9 +43,30 @@ document.addEventListener('DOMContentLoaded', function() {
     function handleBooking() {
         const pickUpDate = pickUpDateInput.value;
         const dropOffDate = dropOffDateInput.value;
-        console.log(pickUpDate);
-        console.log(dropOffDate);
-        if (pickUpDate < todayDate) {
+        const pickUpLocation = document.getElementById('pickUpLocation').value;
+        const dropOffLocation = document.getElementById('dropOffLocation').value;
+
+        // Check if the pick-up location is the default option
+        if (pickUpLocation === "Choose Pick-up Location") {
+            errorMessage.textContent = 'Please select a pick-up location.';
+            return false;
+        }
+
+        // Check if the drop-off location is the default option
+        if (dropOffLocation === "Choose Drop-Off Location") {
+            errorMessage.textContent = 'Please select a drop-off location.';
+            return false;
+        }
+
+        if (dropOffDate === '') {
+            errorMessage.textContent = 'Enter Drop-off Date';
+            totalCostDisplay.textContent = 'Total Cost: $0';
+            return false;
+        } else if (pickUpDate === '') {
+            errorMessage.textContent = 'Enter Pick-Up Date';
+            totalCostDisplay.textContent = 'Total Cost: $0';
+            return false;
+        }else if (pickUpDate < todayDate) {
             errorMessage.textContent = 'Pick-up date cannot be a past date.';
             totalCostDisplay.textContent = 'Total Cost: $0';
             return false;

@@ -1,0 +1,29 @@
+main{
+    min-height: 80vh;
+    padding: 30px;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.booking-container {
+    background-color: white;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.booking-details p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+h2 {
+    text-align: center;
+    color: #444;
+}

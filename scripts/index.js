@@ -19,8 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
             submitButton.textContent = 'Send';
             submitButton.style.backgroundColor = ''; // Revert to original style
         }, 5000); // Change 5000 to the number of milliseconds you want the message to show
-
-
     });
 
     form.addEventListener('submit', function(event) {
@@ -51,6 +49,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         else if (returnDate !=='' && returnDate <= pickupDate) {
             errorMessageDisplay.textContent = 'Return date must be after the pick-up date.';
+            errorMessageDisplay.classList.add('error-message');
+            return;
+        }else if (pickupDate !=='' && returnDate === '') {
+            errorMessageDisplay.textContent = 'Enter Return Date';
+            errorMessageDisplay.classList.add('error-message');
+            return;
+        }else if (pickupDate ==='' && returnDate !== '') {
+            errorMessageDisplay.textContent = 'Enter Pick up Date';
             errorMessageDisplay.classList.add('error-message');
             return;
         }

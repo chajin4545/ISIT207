@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeSpan = document.getElementsByClassName('close')[0];
     const loginForm = document.getElementById('loginForm');
     const logoutBtn = document.getElementById('logoutBtn');
+    const viewBookBtn = document.getElementById('viewBookBtn');
     const loginError = document.getElementById('loginError');
 
     loginBtn.onclick = function() {
@@ -32,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (user) {
             loginBtn.textContent = `Welcome ${userId}`;
             logoutBtn.style.display = "block";
+            viewBookBtn.style.display = "block";
             loginModal.style.display = "none";
             loginForm.style.display = "none"; // Hide the login form
         } else {
@@ -44,7 +46,12 @@ document.addEventListener('DOMContentLoaded', function() {
         loginBtn.textContent = "Login";
         loginForm.style.display = "block"; // Show the login form
         logoutBtn.style.display = "none";
+        viewBookBtn.style.display = "none";
         loginError.style.display = "none";
+    }
+
+    viewBookBtn.onclick = function() {
+        window.location.href = 'viewBooking.html';
     }
 });
 

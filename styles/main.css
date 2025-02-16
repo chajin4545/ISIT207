@@ -128,6 +128,24 @@ nav ul li a {
 #logoutBtn:hover {
     opacity: 0.8;
 }
+
+/* Logout Button Style */
+#viewBookBtn {
+    background-color: #6ca9c7;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 90%; 
+    margin-top: 20px; 
+    border-radius: 5px; 
+    display: none; 
+}
+
+#viewBookBtn:hover {
+    opacity: 0.8;
+}
+
 /* Close Button */
 .close {
     position: absolute;

@@ -30,6 +30,7 @@
                 <button type="submit">Login</button>
                 <p id="loginError" style="color:red; display:none;"></p>
             </form>
+            <button id="viewBookBtn" style="display:none;">View my Booking</button>
             <button id="logoutBtn" style="display:none;">Logout</button>
         </div>
     </div>
@@ -42,10 +43,10 @@
                 <p id="priceTag"></p>
             </div>
             <div class="booking-form">
-                <label for="pickUpDate">Pick-up Date & Time *</label>
+                <label for="pickUpDate">Pick-up Date *</label>
                 <input type="date" id="pickUpDate" name="pickUpDate" required>
     
-                <label for="dropOffDate">Drop-Off Date & Time *</label>
+                <label for="dropOffDate">Drop-Off Date *</label>
                 <input type="date" id="dropOffDate" name="dropOffDate" required>
     
                 <label for="pickUpLocation">Pick-up Location *</label>
@@ -58,7 +59,7 @@
                 <label for="dropOffLocation">Drop-off Location *</label>
                 <select id="dropOffLocation" name="dropOffLocation">
                     <option>Choose Drop-Off Location</option>
-                    <option>Designed Car Park</option>
+                    <option>Designated Car Park</option>
                 </select>
 
                 <div id="totalCostDisplay" style="margin-top: 20px;">Total Cost: $0</div>

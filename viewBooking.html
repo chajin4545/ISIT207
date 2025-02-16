@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sedan Cars</title>
+    <title>AZoom Car Rental</title>
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/Cars.css">
+    <link rel="stylesheet" href="styles/viewBooking.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <!-- Navigation Bar -->
     <header>
@@ -36,41 +42,26 @@
     </div>
 
     <main>
-        <div class="container">
-            <!-- vehicle 1 -->
-            <div class="vehicle-card">
-                <div class="vehicle-image">
-                    <img src="assets/images/tesla_model_3_front.png" alt="tesla model 3">
-                </div>
-                <div class="vehicle-details">
-                    <h2>Tesla Model 3</h2>
-                    <p class="price">$160</p>
-                </div>
-                <div class="vehicle-actions">
-                    <button id="tesla">Select Options</button>
-                </div>
-            </div>
-
-            <!-- vehicle 2 -->
-            <div class="vehicle-card">
-                <div class="vehicle-image">
-                    <img src="assets/images/byd_seal_front.png" alt="byd seal">
-                </div>
-                <div class="vehicle-details">
-                    <h2>BYD seal</h2>
-                    <p class="price">$128</p>
-                </div>
-                <div class="vehicle-actions">
-                    <button id="byd">Select Options</button>
-                </div>
+        <div class="booking-container">
+            <h2>Booking Confirmation</h2>
+            <div class="booking-details">
+                <p><strong>Car:</strong> Porsche Taycan</p>
+                <p><strong>Rental Period:</strong> Febuary 16, 2025 - Febuary 22, 2025</p>
+                <p><strong>Payment Status:</strong> Successful</p>
+                <p><strong>Car Collection Status:</strong> Pending Collection</p>
+                <p><strong>Pick up location:</strong> Office 1 - 99 Joo seng Road, Azoom Building</p>
+                <p><strong>Drop off location:</strong> Designated Car Park</p>
+                <p><strong>Total Payment:</strong> $4620.00</p>
             </div>
         </div>
     </main>
+
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 AZoom Car Rental. All rights reserved.</p>
     </footer>
 
     <script src="scripts/main.js"></script>
-    <script src="scripts/sedan.js"></script>
 </body>
 </html>

@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     redirectUrl = 'SUV.html';
                     break;
                 case 'luxury':
-                    redirectUrl = 'luxury.html';
+                    redirectUrl = 'Luxury.html';
                     break;
                 default:
                     alert('Please select a valid vehicle type.');
@@ -108,6 +108,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Event listener for the luxury div
     document.getElementById('luxury-card').addEventListener('click', function() {
-        window.location.href = 'luxury.html';
+        window.location.href = 'Luxury.html';
     });
 });
